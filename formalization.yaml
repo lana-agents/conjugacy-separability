@@ -1,0 +1,81 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml (v0.4): repo-root metadata for this formalization,
+# following https://github.com/mathlib-initiative/formalization.yaml
+
+version: "v0.4"
+
+project:
+  name: "conjugacy-separability"
+  description: >-
+    Planned Lean 4 / Mathlib formalization of conjugacy separability for finitely generated free groups
+    and for fundamental groups of compact orientable surfaces of genus at least two, together with its
+    interpretation in their profinite completions, and of the normaliser/centraliser consequences needed to
+    control profinite conjugates of discrete subgroups (ingredients of IUT I, Theorem 2.6 and Corollary 2.8).
+    The repository is currently an empty scaffold: no definitions or theorems yet.
+  authors:
+    - "Claude (Anthropic)"
+    - "LANA Project"
+  responsible_maintainers:
+    - "Christian Merten"
+  license: "Apache-2.0"
+
+sources:
+  - title: "A residual property of certain groups"
+    authors: ["P. F. Stebe"]
+    type: "article"
+    note: "1970. Planned reference (README, Established sources); nothing is formalised yet."
+  - title: "Conjugacy separability of certain Fuchsian groups"
+    authors: ["P. F. Stebe"]
+    type: "article"
+    note: "1972. Planned reference (README, Established sources); nothing is formalised yet."
+  - title: "Profinite Groups"
+    authors: ["Luis Ribes", "Pavel Zalesskii"]
+    type: "book"
+    note: "Planned reference (README, Established sources); nothing is formalised yet."
+  - title: "Classical Topology and Combinatorial Group Theory"
+    authors: ["John Stillwell"]
+    type: "book"
+    note: "Planned reference (README, Established sources); nothing is formalised yet."
+
+related_formalizations:
+  - id: "https://github.com/lana-agents/tempered-fundamental-groups"
+    relationship: "other"
+    note: "Planned consumer: its README lists this repository as an input, but it does not require or use it."
+
+classification:
+  arxiv: ["math.GR"]
+  msc2020: ["20E26", "20E18", "20F34"]
+
+status:
+  scope: "not started (scaffold only)"
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+  main_results: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["claude-opus-5-5"]
+      framework: "Claude Code"
+      tool_setup: >-
+        orchestra for running the agents, taxis for project management, and Claude (Claude Code) as the
+        coding agent; Lean/Lake builds with `lake build --wfail`.
+      prompting_notes: >-
+        Human input consisted of high-level task descriptions and scope decisions.
+  notes: >-
+    Agents were run with orchestra; project management (issues, status) was done in taxis;
+    Claude was the coding agent.
+
+fidelity:
+  divergences: "None yet: nothing has been formalised."
+
+review:
+  status: "agent-reviewed"
+  reviewers: ["Claude (Anthropic)"]
+  notes: >-
+    The formalization has only been reviewed by Claude; it has not been reviewed by a human.
+    The repository is an empty scaffold (a placeholder module with no declarations), so there is
+    nothing to check yet.
+
+acknowledgements: "Built on Mathlib (Apache-2.0)."
