@@ -2,6 +2,17 @@
 
 Conjugacy separability for free and orientable surface groups.
 
+## Status
+
+**Not started.** The repository is the initial project scaffold (a single commit,
+2026-07-20). The library `ConjugacySeparability` contains only the placeholder module
+`ConjugacySeparability/Basic.lean`, which has no declarations: there are no definitions or theorems yet
+(and so no `sorry`, `axiom` or `admit`). Everything under *Goals* below is planned, not
+formalised.
+
+No lana-agents repository depends on this one: `iut` and its pinned lana-agents
+dependencies do not `require` it.
+
 ## Goals
 
 Formalise conjugacy separability for finitely generated free groups and for fundamental groups of compact orientable surfaces of genus at least two, together with its interpretation in their profinite completions.
@@ -19,11 +30,13 @@ Mathlib already provides free groups, residual finiteness, subgroup normalisers,
 
 ## Related repositories
 
-A foundational input to `tempered-fundamental-groups`.
+Intended as an input to `tempered-fundamental-groups`, whose README lists it, but
+`tempered-fundamental-groups` does not `require` it and does not use it.
 
 ## Layout
 
-Lean 4 project pinned to `leanprover/lean4:v4.32.0` with Mathlib at `v4.32.0`.
+Lean 4 project pinned to `leanprover/lean4:v4.32.0` with Mathlib at `v4.32.0`
+(commit `81a5d25`), its only direct dependency.
 Library sources live under `ConjugacySeparability/`, and every file must be imported from
 the root module `ConjugacySeparability.lean`.
 
